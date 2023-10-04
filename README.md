@@ -68,3 +68,39 @@ Alguns exemplos de como podemos usar estes operadores:
     print(doc)
 
 ```
+
+## MySQL
+
+### Criando um usuário
+
+```bash
+    # Iniciando
+    sudo mysql
+```
+
+```sql
+    --  Criando um usuário
+    CREATE USER 'evpersa'@'localhost' IDENTIFIED BY '12345';
+
+    -- Dando privilegios
+    GRANT ALL PRIVILEGES ON *.* TO 'evpersa'@'localhost';
+
+    -- Finalizando
+    exit
+```
+
+## mysql.connector
+
+O `mysql.connector` é uma biblioteca Python que permite a conexão com um banco de dados MySQL a partir de um script Python. Isso é feito através do MySQL Connector/Python, um driver de banco de dados que permite que as aplicações Python se comuniquem com os servidores MySQL.
+
+Essa biblioteca apresenta diversas funcionalidades essenciais na manipulação de bancos de dados. Entre as principais, podemos destacar:
+
+connect(): é o método que estabelece a conexão entre a aplicação Python e o servidor de banco de dados. Ele é essencial para iniciar qualquer operação no banco de dados. O método connect() requer parâmetros como host, usuário, senha e nome do banco de dados para estabelecer a conexão.
+
+cursor(): uma vez estabelecida a conexão, a função cursor() é utilizada para criar um objeto cursor. Esse objeto é uma interface que permite a execução de comandos SQL e a manipulação dos registros do banco de dados. O cursor permite navegar, buscar, inserir e excluir registros na base de dados.
+
+execute(): método que efetivamente executa os comandos SQL. Ele é aplicado através do objeto cursor e recebe como parâmetro a string do comando SQL a ser executado.
+
+Utilizando o `mysql.connector`, é possível executar todas as operações padrão de um banco de dados, como: inserir, selecionar, atualizar e excluir dados em um banco de dados MySQL. Além disso, você pode usar esse módulo para realizar operações mais avançadas, como transações, procedimentos armazenados e muito mais. Assim, o mysql.connector torna-se uma ferramenta poderosa e flexível para a manipulação de bancos de dados MySQL a partir de aplicações Python.
+
+[documentação](https://dev.mysql.com/doc/connector-python/en/)
