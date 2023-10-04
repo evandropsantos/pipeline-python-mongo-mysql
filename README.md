@@ -1,5 +1,7 @@
 # Pipeline de dados: integrando Python com MongoDB e MySQL
 
+![diagram](https://caelum-online-public.s3.amazonaws.com/3063-pipeline-dados/imagens/Aula1-img1.png "diagrama do projeto")
+
 ## Servidor venv
 
 ```bash
